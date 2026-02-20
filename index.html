@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation avec Ansible</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1 -->
+        <section class="slide active">
+            <div class="logos">
+                <img src="fsts.png" alt="Logo FSTS">
+                <img src="logo-uhp.png" alt="Logo UHP">
+            </div>
+            <div class="content center">
+                <h1 class="step">Automatisation avec Ansible</h1>
+            </div>
+            <footer class="step">
+                Réalisé par : AOULICHAK Mohamed | Encadré par : Soukaina Mihi | Année universitaire : 2025-2026
+            </footer>
+        </section>
+
+        <!-- Slide 2 -->
+        <section class="slide">
+            <h2>Problématique & Solution</h2>
+            <div class="content">
+                <div class="step card">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> La problématique</h3>
+                    <p>La configuration manuelle des serveurs est lente, chronophage et représente une source majeure d'erreurs humaines. La reproductibilité est quasi impossible sans documentation exhaustive.</p>
+                </div>
+                <div class="step card">
+                    <h3><i class="fa-solid fa-lightbulb"></i> L'approche Ansible</h3>
+                    <p>Une solution d'automatisation IT simple et puissante. Elle repose sur une architecture sans agent (agentless) et utilise du code YAML, lisible par tous, pour décrire l'état désiré de l'infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3 -->
+        <section class="slide">
+            <h2>Les 3 Piliers de l'Architecture Ansible</h2>
+            <div class="content grid-3">
+                <div class="step card text-center">
+                    <i class="fa-solid fa-server fa-3x mb-4"></i>
+                    <h3>L'Inventaire</h3>
+                    <p>Le fichier (statique ou dynamique) recensant l'ensemble des machines cibles sur lesquelles les actions seront exécutées.</p>
+                </div>
+                <div class="step card text-center">
+                    <i class="fa-solid fa-cubes fa-3x mb-4"></i>
+                    <h3>Les Modules</h3>
+                    <p>Les bibliothèques d'actions autonomes exécutées sur les nœuds cibles (ex: apt, yum, copy, service).</p>
+                </div>
+                <div class="step card text-center">
+                    <i class="fa-solid fa-file-code fa-3x mb-4"></i>
+                    <h3>Le Playbook</h3>
+                    <p>Le fichier YAML qui orchestre la recette complète, définissant quelles tâches appliquer à quels hôtes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4 -->
+        <section class="slide">
+            <h2>Démo Live : L'Automatisation en Action</h2>
+            <div class="content">
+                <div class="step alert-info">
+                    <strong><i class="fa-solid fa-bullseye"></i> Objectif :</strong> Transformer 2 serveurs vierges en serveurs Web fonctionnels en un clin d'œil.
+                </div>
+                
+                <div class="demo-grid">
+                    <div class="step architecture-diagram">
+                        <div class="node control-node">
+                            <i class="fa-solid fa-laptop-code fa-2x"></i>
+                            <span>Nœud de contrôle</span>
+                        </div>
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right-long fa-2x"></i>
+                            <span class="ansible-label">Ansible</span>
+                        </div>
+                        <div class="target-nodes">
+                            <div class="node target">
+                                <i class="fa-brands fa-docker fa-2x"></i>
+                                <span>Web 1</span>
+                            </div>
+                            <div class="node target">
+                                <i class="fa-brands fa-docker fa-2x"></i>
+                                <span>Web 2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step card">
+                        <h3><i class="fa-solid fa-list-check"></i> Plan d'action</h3>
+                        <ul>
+                            <li>Mettre à jour les systèmes d'exploitation.</li>
+                            <li>Installer le service Web (Nginx).</li>
+                            <li>Déployer une page d'accueil personnalisée.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step text-center highlight-text">
+                    <h3><i class="fa-solid fa-rocket"></i> Place à la pratique !</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5 -->
+        <section class="slide">
+            <h2>Conclusion</h2>
+            <div class="content center">
+                <div class="step card w-100">
+                    <h3><i class="fa-solid fa-chart-line"></i> Bilan des bénéfices</h3>
+                    <ul class="benefits-list">
+                        <li><strong>Idempotence :</strong> Le code peut être exécuté plusieurs fois sans modifier un système déjà dans l'état désiré.</li>
+                        <li><strong>Gain de temps :</strong> Déploiements massifs en quelques secondes.</li>
+                        <li><strong>Scalabilité :</strong> Gérer 10 ou 1000 serveurs demande le même effort.</li>
+                    </ul>
+                </div>
+                <div class="step text-center mt-5">
+                    <h2 class="questions-title">Avez-vous des questions ?</h2>
+                    <i class="fa-regular fa-comments fa-4x mt-3 text-muted"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
